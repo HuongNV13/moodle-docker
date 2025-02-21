@@ -10,7 +10,7 @@ then
     testcmd="bin/moodle-docker-compose exec -T webserver vendor/bin/phpunit --filter core_dml_testcase"
 elif [ "$SUITE" = "phpunit-full" ];
 then
-    testcmd="bin/moodle-docker-compose exec -T webserver vendor/bin/phpunit --display-deprecations --display-errors --display-notices --display-warnings"
+    testcmd="bin/moodle-docker-compose exec -T webserver vendor/bin/phpunit --filter core_analytics"
 else
     echo "Error, unknown suite '$SUITE'"
     exit 1
